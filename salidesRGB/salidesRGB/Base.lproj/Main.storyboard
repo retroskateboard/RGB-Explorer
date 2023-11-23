@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="salidesRGB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Ncp-AT-NF5">
+                                <rect key="frame" x="48" y="758" width="266" height="31"/>
+                                <connections>
+                                    <action selector="bSliderMoving:" destination="BYZ-38-t0r" eventType="valueChanged" id="N7J-cs-L54"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="43" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="iKM-Dm-nY5">
+                                <rect key="frame" x="48" y="638" width="272" height="31"/>
+                                <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="rSliderMoving:" destination="BYZ-38-t0r" eventType="valueChanged" id="ol5-ar-P2x"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVi-kp-crP">
+                                <rect key="frame" x="120" y="573" width="153" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reset"/>
+                                <connections>
+                                    <action selector="resetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W1N-DB-OsO"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="By7-cR-12k">
+                                <rect key="frame" x="48" y="698" width="266" height="31"/>
+                                <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                <connections>
+                                    <action selector="gSliderMoving:" destination="BYZ-38-t0r" eventType="valueChanged" id="ym2-De-1GG"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmE-cR-UbK">
+                                <rect key="frame" x="341" y="643" width="21" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="127" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2F-bv-vbm">
+                                <rect key="frame" x="335" y="703" width="27" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="127" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ret-0l-2fC">
+                                <rect key="frame" x="335" y="763" width="27" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPC-oQ-mKM">
+                                <rect key="frame" x="120" y="508" width="153" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Copy RGB code"/>
+                                <connections>
+                                    <action selector="copyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="puD-s2-UYC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gVi-kp-crP" secondAttribute="trailing" constant="120" id="5i7-jD-BHR"/>
+                            <constraint firstItem="Ncp-AT-NF5" firstAttribute="top" secondItem="By7-cR-12k" secondAttribute="bottom" constant="30" id="6d2-7B-AGy"/>
+                            <constraint firstItem="iKM-Dm-nY5" firstAttribute="top" secondItem="gVi-kp-crP" secondAttribute="bottom" constant="30" id="7LI-bG-1wK"/>
+                            <constraint firstItem="o2F-bv-vbm" firstAttribute="leading" secondItem="By7-cR-12k" secondAttribute="trailing" constant="23" id="A71-uU-e2H"/>
+                            <constraint firstItem="iKM-Dm-nY5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Bqr-m4-nVy"/>
+                            <constraint firstItem="aPC-oQ-mKM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="Dc8-bu-fK3"/>
+                            <constraint firstItem="By7-cR-12k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="HEG-Mb-hR5"/>
+                            <constraint firstItem="gVi-kp-crP" firstAttribute="top" secondItem="aPC-oQ-mKM" secondAttribute="bottom" constant="30" id="Hyh-55-QDr"/>
+                            <constraint firstItem="gVi-kp-crP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="ISL-uQ-IN0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HmE-cR-UbK" secondAttribute="trailing" constant="31" id="Jtd-UH-xnN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o2F-bv-vbm" secondAttribute="trailing" constant="31" id="Ows-O9-6wU"/>
+                            <constraint firstItem="HmE-cR-UbK" firstAttribute="leading" secondItem="iKM-Dm-nY5" secondAttribute="trailing" constant="23" id="QZ9-Ki-qyH"/>
+                            <constraint firstItem="o2F-bv-vbm" firstAttribute="top" secondItem="HmE-cR-UbK" secondAttribute="bottom" constant="39" id="RTX-6V-5Iw"/>
+                            <constraint firstItem="Ret-0l-2fC" firstAttribute="top" secondItem="o2F-bv-vbm" secondAttribute="bottom" constant="39" id="U89-wh-7c9"/>
+                            <constraint firstItem="o2F-bv-vbm" firstAttribute="leading" secondItem="By7-cR-12k" secondAttribute="trailing" constant="23" id="Vci-bO-a7G"/>
+                            <constraint firstItem="HmE-cR-UbK" firstAttribute="leading" secondItem="iKM-Dm-nY5" secondAttribute="trailing" constant="23" id="XOi-7b-Ua2"/>
+                            <constraint firstItem="By7-cR-12k" firstAttribute="top" secondItem="iKM-Dm-nY5" secondAttribute="bottom" constant="30" id="ccy-1p-k8I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aPC-oQ-mKM" secondAttribute="trailing" constant="120" id="f5g-nm-NJ1"/>
+                            <constraint firstItem="Ret-0l-2fC" firstAttribute="leading" secondItem="Ncp-AT-NF5" secondAttribute="trailing" constant="23" id="fBB-eo-Ycj"/>
+                            <constraint firstItem="Ret-0l-2fC" firstAttribute="leading" secondItem="Ncp-AT-NF5" secondAttribute="trailing" constant="23" id="ifd-sH-Eq7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ret-0l-2fC" secondAttribute="bottom" constant="34" id="lZS-Yd-kD0"/>
+                            <constraint firstItem="Ncp-AT-NF5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="m3U-zO-0nZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ret-0l-2fC" secondAttribute="trailing" constant="31" id="wbb-Ol-TaE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ncp-AT-NF5" secondAttribute="bottom" constant="30" id="ysD-ld-owI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bLabel" destination="Ret-0l-2fC" id="AUb-95-jje"/>
+                        <outlet property="bSlider" destination="Ncp-AT-NF5" id="Xtf-Ye-Zy8"/>
+                        <outlet property="copyButton" destination="aPC-oQ-mKM" id="wEd-oC-cwP"/>
+                        <outlet property="gLabel" destination="o2F-bv-vbm" id="Hxh-VK-4LD"/>
+                        <outlet property="gSlider" destination="By7-cR-12k" id="ksM-NL-5cU"/>
+                        <outlet property="rLabel" destination="HmE-cR-UbK" id="U18-83-WUB"/>
+                        <outlet property="rSlider" destination="iKM-Dm-nY5" id="AkC-Fj-GqX"/>
+                        <outlet property="resetButton" destination="gVi-kp-crP" id="Egd-ym-IfK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.95419847328243" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
